@@ -1,0 +1,11 @@
+                                 model  balanced_accuracy  macro_f1  accuracy
+    Always predict majority (baseline)              0.333     0.250     0.600
+Random guess by class share (baseline)              0.326     0.326     0.457
+                   Logistic Regression              0.343     0.293     0.315
+                         Random Forest              0.334     0.274     0.586
+                     Gradient Boosting              0.337     0.312     0.358
+
+Permutation test (Logistic Regression): real 0.343, shuffled mean 0.333, p = 0.060
+Positive control (planted feature strength -> balanced accuracy): {0.25: 0.393, 0.5: 0.455, 1.0: 0.58}
+
+Verdict: No model beats shuffled labels: the features carry no usable information about the risk rating.

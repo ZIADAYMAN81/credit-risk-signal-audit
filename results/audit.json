@@ -1,0 +1,255 @@
+{
+  "rows": 15000,
+  "class_share": {
+    "Low": 0.6,
+    "Medium": 0.3,
+    "High": 0.1
+  },
+  "missing_share": {
+    "Income": 0.15,
+    "Credit Score": 0.15,
+    "Loan Amount": 0.15,
+    "Assets Value": 0.15,
+    "Number of Dependents": 0.15,
+    "Previous Defaults": 0.15
+  },
+  "models": [
+    {
+      "model": "Always predict majority (baseline)",
+      "balanced_accuracy": 0.3333,
+      "balanced_accuracy_std": 0.0,
+      "macro_f1": 0.25,
+      "macro_f1_std": 0.0,
+      "accuracy": 0.6,
+      "accuracy_std": 0.0
+    },
+    {
+      "model": "Random guess by class share (baseline)",
+      "balanced_accuracy": 0.3264,
+      "balanced_accuracy_std": 0.0051,
+      "macro_f1": 0.3265,
+      "macro_f1_std": 0.0051,
+      "accuracy": 0.4571,
+      "accuracy_std": 0.0048
+    },
+    {
+      "model": "Logistic Regression",
+      "balanced_accuracy": 0.3426,
+      "balanced_accuracy_std": 0.013,
+      "macro_f1": 0.2931,
+      "macro_f1_std": 0.0084,
+      "accuracy": 0.3154,
+      "accuracy_std": 0.0098
+    },
+    {
+      "model": "Random Forest",
+      "balanced_accuracy": 0.334,
+      "balanced_accuracy_std": 0.001,
+      "macro_f1": 0.2738,
+      "macro_f1_std": 0.0029,
+      "accuracy": 0.5863,
+      "accuracy_std": 0.002
+    },
+    {
+      "model": "Gradient Boosting",
+      "balanced_accuracy": 0.3367,
+      "balanced_accuracy_std": 0.0134,
+      "macro_f1": 0.3118,
+      "macro_f1_std": 0.0146,
+      "accuracy": 0.3582,
+      "accuracy_std": 0.0223
+    }
+  ],
+  "best_model": "Logistic Regression",
+  "permutation_test": {
+    "balanced_accuracy": 0.3426,
+    "null_mean": 0.3331,
+    "null_95th_percentile": 0.3427,
+    "p_value": 0.0597,
+    "permutations": 200
+  },
+  "positive_control_balanced_accuracy": {
+    "0.25": 0.3929,
+    "0.5": 0.4551,
+    "1.0": 0.5804
+  },
+  "association_tests": [
+    {
+      "feature": "Marital Status Change",
+      "test": "chi-squared",
+      "statistic": 13.23701,
+      "p_value": 0.01017,
+      "effect_size": 0.01755,
+      "effect_measure": "Cramer's V",
+      "p_holm": 0.1933
+    },
+    {
+      "feature": "Income",
+      "test": "Kruskal-Wallis",
+      "statistic": 5.95263,
+      "p_value": 0.05098,
+      "effect_size": 0.00031,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 0.91765
+    },
+    {
+      "feature": "Gender",
+      "test": "chi-squared",
+      "statistic": 7.67809,
+      "p_value": 0.10411,
+      "effect_size": 0.01107,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Previous Defaults",
+      "test": "chi-squared",
+      "statistic": 12.04469,
+      "p_value": 0.14922,
+      "effect_size": 0.01259,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "State",
+      "test": "chi-squared",
+      "statistic": 131.67441,
+      "p_value": 0.15165,
+      "effect_size": 0.02285,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Loan Purpose",
+      "test": "chi-squared",
+      "statistic": 8.43811,
+      "p_value": 0.20773,
+      "effect_size": 0.00901,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Loan Amount",
+      "test": "Kruskal-Wallis",
+      "statistic": 2.55714,
+      "p_value": 0.27843,
+      "effect_size": 4e-05,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Employment Status",
+      "test": "chi-squared",
+      "statistic": 5.06151,
+      "p_value": 0.28104,
+      "effect_size": 0.00595,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Years at Current Job",
+      "test": "Kruskal-Wallis",
+      "statistic": 2.48238,
+      "p_value": 0.28904,
+      "effect_size": 3e-05,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Age",
+      "test": "Kruskal-Wallis",
+      "statistic": 1.99308,
+      "p_value": 0.36916,
+      "effect_size": 0.0,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "City",
+      "test": "chi-squared",
+      "statistic": 21275.24031,
+      "p_value": 0.40438,
+      "effect_size": 0.03993,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Marital Status",
+      "test": "chi-squared",
+      "statistic": 5.57558,
+      "p_value": 0.47237,
+      "effect_size": 0.0,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Country",
+      "test": "chi-squared",
+      "statistic": 482.94492,
+      "p_value": 0.50499,
+      "effect_size": 0.0,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Payment History",
+      "test": "chi-squared",
+      "statistic": 5.22919,
+      "p_value": 0.51477,
+      "effect_size": 0.0,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Assets Value",
+      "test": "Kruskal-Wallis",
+      "statistic": 0.68176,
+      "p_value": 0.71114,
+      "effect_size": 0.0,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Education Level",
+      "test": "chi-squared",
+      "statistic": 2.94972,
+      "p_value": 0.81513,
+      "effect_size": 0.0,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Credit Score",
+      "test": "Kruskal-Wallis",
+      "statistic": 0.2699,
+      "p_value": 0.87376,
+      "effect_size": 0.0,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Number of Dependents",
+      "test": "chi-squared",
+      "statistic": 3.68097,
+      "p_value": 0.8847,
+      "effect_size": 0.0,
+      "effect_measure": "Cramer's V",
+      "p_holm": 1.0
+    },
+    {
+      "feature": "Debt-to-Income Ratio",
+      "test": "Kruskal-Wallis",
+      "statistic": 0.20282,
+      "p_value": 0.90356,
+      "effect_size": 0.0,
+      "effect_measure": "epsilon-squared",
+      "p_holm": 1.0
+    }
+  ],
+  "verdict": {
+    "signal_detected": false,
+    "features_significant_after_correction": [],
+    "summary": "No model beats shuffled labels: the features carry no usable information about the risk rating."
+  },
+  "runtime_seconds": 32.6
+}
