@@ -1,5 +1,7 @@
 # Credit Risk Signal Audit
 
+[![tests](https://github.com/ZIADAYMAN81/credit-risk-signal-audit/actions/workflows/tests.yml/badge.svg)](https://github.com/ZIADAYMAN81/credit-risk-signal-audit/actions/workflows/tests.yml)
+
 > Machine Learning coursework, The British University in Egypt, December 2025. Author: Ziad Ayman.
 
 Can a person's income, credit score, loan amount and payment history predict their loan risk rating? On this dataset, **no**. This project shows how to prove that rigorously instead of reporting a misleading accuracy number.
@@ -65,3 +67,6 @@ The tests run the audit on synthetic data with the same schema: it must find **n
 
 ## Tech stack
 Python · pandas · scikit-learn · SciPy · matplotlib · pytest
+
+## License
+MIT, see [LICENSE](LICENSE).
